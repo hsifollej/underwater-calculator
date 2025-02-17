@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+
+
+body{
+    font-family: 'Pixelify Sans';
+}
+
+.popup {
+    font-family: 'Pixelify Sans';
+    width: 300px;
+    height: 425px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #F2FDFF 0.99%, #D4F4FD 99.93%);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Optional: Add shadow and padding */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+     
+}
+
+.popup-content {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 55px;
+    align-items: center;
+    
+}
+
+#display {
+    width: 270px;
+    height: 60px;
+    color: #6EB7BC;
+    font-family: 'Pixelify Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: right;
+    border-radius: 8px;
+    border: 2px solid rgba(170, 229, 255, 0.15);
+    background: #FFFDFC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    gap: 16px;
+    flex-grow: 1;
+    
+}
+
+button {
+    width: 52px;
+    height: 36px;
+    border-radius: 15px;
+    border: 3px solid rgba(160, 227, 255, 0.07);
+    background: linear-gradient(180deg, #D8FCFF 0%, #E3FDFF 40%, #ffffffaf 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    color: #55aab0;
+}
+
+button:active {
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.2), 
+                inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+    transform: translateY(2px); /* Slight downward movement */
+}
+
+
+input {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.jellyfish {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transform: scale(2); 
+    animation: float 4s infinite ease-in-out;
+}
+
+.pressed {
+    transform: scale(0.9);
+    background: #B8F4FF;
+    box-shadow: isnert 2px 2px 6px rgba(0,0,0,0.2);
+}
